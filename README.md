@@ -34,14 +34,53 @@ A tabela turmas possui informações de turma, quantidade de aulas e horários.
 <h3>alunos</h3>
 A tabela alunos contém os dados pessoais dos alunos, como nome e data de nascimento, além da turma que frequenta.
 <br><br>
-<img src="https://imgtr.ee/images/2023/07/22/b1c3fa71b3dddf0abe75bdba72edfb1b.png" alt="b1c3fa71b3dddf0abe75bdba72edfb1b.png" border="0">
+
+| Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
+| ----------------- | ------------- |------------- | ------------- | ------------- |
+| id_aluno | INT  |  PK  | PRIMARY  | ID do aluno  |
+| nome  | VARCHAR(50)  | - | - | Nome do aluno |
+| data_nascimento | DATE  | - | -  | Data de nascimento |
+| id_turma | INT  | FK | FK_ALUNOS_ID_TURMA  | ID da turma |
+
+
 
 <h3>financeiro</h3>
 A tabela financeiro contém dados financeiros alunos matriculados. É a partir dela que é gerado o id_transação que identifica as informações financeiras dos alunos. A tabela contém dados sobre o método de pagamento, tabela e valor total pago.
 <br><br>
 
+| Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
+| ----------------- | ------------- |------------- | ------------- | ------------- |
+| id_transacao  | INT  |  PK  | PRIMARY  | ID da transacao  |
+| metodo_pagamento  | VARCHAR(20)  | - | - | Método de pagamento |
+| total_pago | INT  | - | -  | Valor total pago |
+| vt_estornaveis | INT  | - | -  | Valor de taxas estornáveis |
+| vt_n_estornaveis | INT  | - | -  | Valor de taxas não estornáveis |
+| estornado | INT  | - | -  | Valor estornado |
+
+<h3>pedidos</h3>
+A tabela pedidos possui o registro dos pedidos realizados por cada aluno, o id da transação e o status de pagamento da oficina. 
+<br><br>
+
+| Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
+| ----------------- | ------------- |------------- | ------------- | ------------- |
+| id_pedido | INT  |  PK  | PRIMARY  | ID do pedido  |
+| id_transacao  | INT  | FK | FK_PEDIDOS_ID_TRANSACAO | ID da transação |
+| status_pagamento | VARCHAR(20)  | - | -  | Status de pagamento |
+
+
 
 <h3>historico_alunos</h3>
 A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-de-pau. São dados gerados inicialmente no ato da matrícula a partir de um formulário, juntamente com os ids de pedido, turma e aluno.
 <br><br>
-<img src="https://imgtr.ee/images/2023/07/22/f9f77c51f7d5574b306bf1253143faf1.png" alt="f9f77c51f7d5574b306bf1253143faf1.png" border="0">
+
+| Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
+| ----------------- | ------------- |------------- | ------------- | ------------- |
+| id_transacao  | INT  |  PK  | PRIMARY  | ID da transacao  |
+| metodo_pagamento  | VARCHAR(20)  | - | - | Método de pagamento |
+| total_pago | INT  | - | -  | Valor total pago |
+| vt_estornaveis | INT  | - | -  | Valor de taxas estornáveis |
+| vt_n_estornaveis | INT  | - | -  | Valor de taxas não estornáveis |
+| estornado | INT  | - | -  | Valor estornado |
+| estornado | INT  | - | -  | Valor estornado |
+| estornado | INT  | - | -  | Valor estornado |
+| estornado | INT  | - | -  | Valor estornado |
