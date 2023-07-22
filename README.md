@@ -136,13 +136,28 @@ A view alunos_por_turma possui a quantidade de alunos por turma, horário das au
 As funções criadas para esse banco de dados foram a receita_total e a total_taxas, com o objetivo de calcular valores da tabela financeiro e facilitar a análise da receita gerada pelo curso.
 
 <h3>receita_total</h3>
-É a diferença entre o valor líquido e o valor das taxas estornáveis.
+É a diferença entre o valor líquido (parâmetro 1) e o valor das taxas estornáveis (parâmetro 2).
 <br><br>
 <img src="https://imgtr.ee/images/2023/07/22/12e3e97ec90af5191b0294edb9e9b665.png" alt="12e3e97ec90af5191b0294edb9e9b665.png" border="0">
 <br>
 
 <h3>total_taxas</h3>
-É o somatório de todas as taxas, estornáveis e não estornáveis.
+É o somatório de todas as taxas, estornáveis (parâmetro 1) e não estornáveis (parâmetro 2).
 <br><br>
 <img src="https://imgtr.ee/images/2023/07/22/f53601f049e7c4f2fab58899d8fcb973.png" alt="f53601f049e7c4f2fab58899d8fcb973.png" border="0">
+<br>
+
+ <h2>Stored Procedures</h2>
+ Foram elaborados dois storage procedures, um de ordenamento de tabelas e outro para inserção de novos alunos na tabela alunos.
+
+ <h3>ordem_tabela</h3>
+ Ordena qualquer tabela do banco de dados a partir de três parâmetros: t_nome (nome da tabela), col_campo (campo de referência para o ordenamento) e ordem (ascendente ou descendente).
+ <br><br>
+<img src="https://imgtr.ee/images/2023/07/22/f4c0fa76a829fa91743571f62347162c.png" alt="f4c0fa76a829fa91743571f62347162c.png" border="0">
+ <br>
+
+<h3>novo_aluno</h3>
+Insere um novo aluno na tabela alunos, recebendo como parâmetro: a_nome (nome do aluno), a_dnasc (data de nascimento) e turma (número da turma).
+<br><br>
+<img src="https://imgtr.ee/images/2023/07/22/709b7e79e9870f8492782d24201889e6.png" alt="709b7e79e9870f8492782d24201889e6.png" border="0">
 <br>
