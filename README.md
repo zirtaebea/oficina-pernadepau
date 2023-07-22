@@ -27,7 +27,7 @@ Os atributos e relacionamentos entre as entidades definidas podem ser vistos no 
 <br>
 
 <h2>Tabelas</h2>
-Seguindo a lógica das entidades definidas anteriormente, foram estabelecidas cinco tabelas, sendo elas respectivamente historico_alunos, alunos, pedidos, financeiro e turmas.
+Seguindo a lógica das entidades definidas anteriormente, foram estabelecidas cinco tabelas, sendo elas respectivamente turmas, alunos, financeiro, pedidos e historico_alunos.
 <br>
 
 <h3>turmas</h3>
@@ -99,6 +99,12 @@ A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-
 | frequencia | INT  | - | -  | Frequência nas aulas |
 
 <br><br>
+
+<h2>Tabelas de auditoria</h2>
+<h3>LOG_ALUNOS</h3>
+<h3>LOG_HISTORICO_ALUNOS</h3>
+
+<br><br>
 <h2>Views</h2>
 Para otimizar consultas na tabela, foram criadas 5 views, sendo elas pagamento_alunos, alunos_turma, expectativas_experiencia, contatos e alunos_por_turma. 
 
@@ -160,4 +166,20 @@ As funções criadas para esse banco de dados foram a receita_total e a total_ta
 Insere um novo aluno na tabela alunos, recebendo como parâmetro: a_nome (nome do aluno), a_dnasc (data de nascimento) e turma (número da turma).
 <br><br>
 <img src="https://imgtr.ee/images/2023/07/22/709b7e79e9870f8492782d24201889e6.png" alt="709b7e79e9870f8492782d24201889e6.png" border="0">
+<br>
+
+
+<h2>Triggers</h2>
+Os triggers foram elaborados juntamente com as tabelas de log/auditoria (LOG_ALUNOS e LOG_HISTORICO_ALUNOS), e tem a funcionalidade de registrar e verificar dados no banco antes de inseri-los.
+
+<h3>TR_LOG_ALUNOS</h3>
+É acionado depois que um novo aluno é inserido no banco de dados. O registro de inserção é salvo na tabela LOG_ALUNOS e conta com os dados do aluno inserido, o usuário que fez o procedimento e o momento (data e hora).
+<br><br>
+
+<br>
+
+<h3>TR_LOG_HISTORICO_ALUNOS</h3>
+É feita a verificação do status de pagamento do pedido do aluno antes de inserir os dados dele na tabela historico_alunos. Caso o pagamento não tenha sido realizado, aparecerá uma mensagem de erro. O acompanhamento da inserção desses dados é feita na tabela LOG_HISTORICO_ALUNOS, que conta com o número do pedido, usuário e a data e hora do procedimento.
+<br><br>
+
 <br>
