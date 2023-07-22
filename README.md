@@ -175,11 +175,13 @@ Os triggers foram elaborados juntamente com as tabelas de log/auditoria (LOG_ALU
 <h3>TR_LOG_ALUNOS</h3>
 É acionado depois que um novo aluno é inserido no banco de dados. O registro de inserção é salvo na tabela LOG_ALUNOS e conta com os dados do aluno inserido, o usuário que fez o procedimento e o momento (data e hora).
 <br><br>
-
+<img src="https://imgtr.ee/images/2023/07/22/d7d72874ae787440740a75ed5edfde54.png" alt="d7d72874ae787440740a75ed5edfde54.png" border="0">
 <br>
 
 <h3>TR_LOG_HISTORICO_ALUNOS</h3>
 É feita a verificação do status de pagamento do pedido do aluno antes de inserir os dados dele na tabela historico_alunos. Caso o pagamento não tenha sido realizado, aparecerá uma mensagem de erro. O acompanhamento da inserção desses dados é feita na tabela LOG_HISTORICO_ALUNOS, que conta com o número do pedido, usuário e a data e hora do procedimento.
 <br><br>
-
+<img src="https://imgtr.ee/images/2023/07/22/e9df40c650169533ad3b1773a8f0f47a.png" alt="e9df40c650169533ad3b1773a8f0f47a.png" border="0">
 <br>
+
+<h2>Usuários</h2>
