@@ -1,8 +1,15 @@
-<h1>Banco de dados para a Oficina de Perna-de-Pau.</h1>
+<h1>Banco de dados para a Oficina de Perna-de-Pau</h1>
 O projeto contempla o desenvolvimento de um banco de dados relacionais para a Oficina Perna-de-Pau.
 
-<h2>Sobre</h2>
-xx
+<h2>Scripts</h2>
+1) Criação de tabelas
+2) Inserção de dados
+3) Views
+4) Funções
+5) Stored Procedures
+6) Triggers
+7) Usuários
+8)
 
 <h2>Entidades, atributos e relacionamentos</h2>
 Para a composição do banco de dados, foram definidas <b>cinco</b> entidades <br>
