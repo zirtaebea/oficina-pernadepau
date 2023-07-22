@@ -2,18 +2,15 @@
 O projeto contempla o desenvolvimento de um banco de dados relacionais para a Oficina Perna-de-Pau.
 
 <h2>Scripts</h2>
-<h4>Banco de dados</h4>
-1) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/00_oficina_create.sql">Criação de tabelas</a><br>
-2) <a href="">Inserção de dados</a><br>
-3) <a href="">Views</a><br>
-4) <a href="">Funções</a><br>
-5) <a href="">Stored Procedures</a><br>
-6) <a href="">Triggers</a><br>
-7) <a href="">Usuários</a><br>
 
-<h4>Outros</h4>
-8) <a href="">Sublinguagem TCL</a><br>
-9) <a href="">Backup</a><br>
+1) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/00_oficina_create.sql">Criação de tabelas</a><br>
+2) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/01_oficina_dados.sql">Inserção de dados</a><br>
+3) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/02_oficina_views.sql">Views</a><br>
+4) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/03_oficina_functions.sql">Funções</a><br>
+5) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/04_oficina_stored_procedures.sql">Stored Procedures</a><br>
+6) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/05_oficina_triggers.sql">Triggers</a><br>
+7) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/06_oficina_users.sql">Usuários</a><br>
+
 
 <h2>Entidades, atributos e relacionamentos</h2>
 Para a composição do banco de dados, foram definidas <b>cinco</b> entidades <br>
