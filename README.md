@@ -2,14 +2,18 @@
 O projeto contempla o desenvolvimento de um banco de dados relacionais para a Oficina Perna-de-Pau.
 
 <h2>Scripts</h2>
-1) Criação de tabelas
-2) Inserção de dados
-3) Views
-4) Funções
-5) Stored Procedures
-6) Triggers
-7) Usuários
-8)
+<h4>Banco de dados</h4>
+1) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/00_oficina_create.sql">Criação de tabelas</a><br>
+2) <a href="">Inserção de dados</a><br>
+3) <a href="">Views</a><br>
+4) <a href="">Funções</a><br>
+5) <a href="">Stored Procedures</a><br>
+6) <a href="">Triggers</a><br>
+7) <a href="">Usuários</a><br>
+
+<h4>Outros</h4>
+8) <a href="">Sublinguagem TCL</a><br>
+9) <a href="">Backup</a><br>
 
 <h2>Entidades, atributos e relacionamentos</h2>
 Para a composição do banco de dados, foram definidas <b>cinco</b> entidades <br>
