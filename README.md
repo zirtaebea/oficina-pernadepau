@@ -130,3 +130,19 @@ A view contatos tem como objetivo mostrar o contato de cada aluno, juntamente co
 A view alunos_por_turma possui a quantidade de alunos por turma, horário das aulas e a quantidade de aulas.
 <br><br>
 <img src="https://imgtr.ee/images/2023/07/22/2b4792f13847353cc4c3888088c19a3e.png" alt="2b4792f13847353cc4c3888088c19a3e.png" border="0">
+<br>
+
+<h2>Funções</h2>
+As funções criadas para esse banco de dados foram a receita_total e a total_taxas, com o objetivo de calcular valores da tabela financeiro e facilitar a análise da receita gerada pelo curso.
+
+<h3>receita_total</h3>
+É a diferença entre o valor líquido e o valor das taxas estornáveis.
+<br><br>
+<img src="https://imgtr.ee/images/2023/07/22/12e3e97ec90af5191b0294edb9e9b665.png" alt="12e3e97ec90af5191b0294edb9e9b665.png" border="0">
+<br>
+
+<h3>total_taxas</h3>
+É o somatório de todas as taxas, estornáveis e não estornáveis.
+<br><br>
+<img src="https://imgtr.ee/images/2023/07/22/f53601f049e7c4f2fab58899d8fcb973.png" alt="f53601f049e7c4f2fab58899d8fcb973.png" border="0">
+<br>
