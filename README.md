@@ -75,12 +75,12 @@ A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-
 
 | Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
 | ----------------- | ------------- |------------- | ------------- | ------------- |
-| id_transacao  | INT  |  PK  | PRIMARY  | ID da transacao  |
-| metodo_pagamento  | VARCHAR(20)  | - | - | Método de pagamento |
-| total_pago | INT  | - | -  | Valor total pago |
-| vt_estornaveis | INT  | - | -  | Valor de taxas estornáveis |
-| vt_n_estornaveis | INT  | - | -  | Valor de taxas não estornáveis |
-| estornado | INT  | - | -  | Valor estornado |
-| estornado | INT  | - | -  | Valor estornado |
-| estornado | INT  | - | -  | Valor estornado |
-| estornado | INT  | - | -  | Valor estornado |
+| n_matricula  | INT  |  PK  | PRIMARY  | Número de matricula |
+| id_pedido  |  INT | FK | FK_HISTORICO_ALUNOS_ID_PEDIDO | ID do pedido |
+| id_turma | INT  | FK | FK_HISTORICO_ALUNOS_ID_TURMA | ID da turma |
+| id_aluno | INT  | FK | FK_HISTORICO_ALUNOS_ID_ALUNO | ID do aluno |
+| data_hora_insc | DATETIME | - | -  | Data e hora da inscrição |
+| contato | VARCHAR(20) | - | -  | Número de contato |
+| experiencia | BIT | - | -  | Experiência com perna-de-pau |
+| expectativas | VARCHAR(20) | - | -  | Expectativas com a oficina |
+| frequencia | INT  | - | -  | Frequência nas aulas |
