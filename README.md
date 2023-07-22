@@ -214,9 +214,33 @@ Foram criados três perfis de usuários diferentes para manipulação dos dados 
 <br>
 <h3>RH</h3>
 
-| Descrição  | DML | Grants |
-| ---- | ------ |-----------| 
-| Leitura | SELECT |  Sim |
-| Inserção | INSERT |  Não |
-| Atualização | UPDATE |  Não |
-| Remoção | DELETE | Não |
+| Descrição  | DML | Grants | Tabelas
+| ---- | ------ |-----------| ------- |
+| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos e historico_alunos |
+| Inserção | INSERT |  Não |  -  |
+| Atualização | UPDATE |  Não | -  |  
+| Remoção | DELETE | Não |   -  |
+
+<br>
+
+<h3>Financeiro</h3>
+
+| Descrição  | DML | Grants | Tabelas
+| ---- | ------ |-----------| ------- |
+| Leitura | SELECT |  Sim | turmas, alunos e historico alunos  |
+| Inserção | INSERT |  Sim |  financeiro e pedidos |
+| Atualização | UPDATE |  Sim | financeiro e pedidos |  
+| Remoção | DELETE | Não |  -   |
+
+
+<br>
+
+<h3>Administrativo</h3>
+
+| Descrição  | DML | Grants | Tabelas
+| ---- | ------ |-----------| ------- |
+| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos e historico_alunos |
+| Inserção | INSERT |  Sim |  turmas, alunos e historico alunos |
+| Atualização | UPDATE | Sim | turmas, alunos e historico alunos |  
+| Remoção | DELETE | Não |  -   |
+
