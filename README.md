@@ -103,15 +103,22 @@ A view pagamento_alunos possui os dados pessoais de cada aluno juntamente com as
 <h3>alunos_turma</h3>
 A view alunos_turma é composta pela matricula e nome dos alunos, a turma em que estão matriculados e a frequência nas aulas, sendo este último o principal objetivo da view.
 <br><br>
+<img src="https://imgtr.ee/images/2023/07/22/e7aed33c7658ea14853edc2f0651b9c8.png" alt="e7aed33c7658ea14853edc2f0651b9c8.png" border="0">
+<br>
 
 <h3>expectativas_experiencia</h3>
 A view de expectativas_experiencia tem como objetivo mostrar os dados de expectativas do curso e experiência de cada aluno.
 <br><br>
+<img src="https://imgtr.ee/images/2023/07/22/a9e03311f40e74a2507ab5aed2c35470.png" alt="a9e03311f40e74a2507ab5aed2c35470.png" border="0">
+<br>
 
 <h3>contatos</h3>
 A view contatos tem como objetivo mostrar o contato de cada aluno, juntamente com a data de ingresso.
 <br><br>
+<img src="https://imgtr.ee/images/2023/07/22/41c8e85fd586349f9ae1e2921a1c6ed7.png" alt="41c8e85fd586349f9ae1e2921a1c6ed7.png" border="0">
+<br>
 
 <h3>alunos_por_turma</h3>
 A view alunos_por_turma possui a quantidade de alunos por turma, horário das aulas e a quantidade de aulas.
 <br><br>
+<img src="https://imgtr.ee/images/2023/07/22/2b4792f13847353cc4c3888088c19a3e.png" alt="2b4792f13847353cc4c3888088c19a3e.png" border="0">
