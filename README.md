@@ -102,7 +102,29 @@ A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-
 
 <h2>Tabelas de auditoria</h2>
 <h3>LOG_ALUNOS</h3>
+A tabela LOG_ALUNOS apresenta o histórico de inserção de dados na tabela alunos.
+<br><br>
+
+| Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
+| ----------------- | ------------- |------------- | ------------- | ------------- |
+| id_aluno  | INT  |  PK  | PRIMARY  | ID do aluno |
+| nome  | VARCHAR(50)  |  -  | - | Nome do aluno |
+| user  | VARCHAR(100)  |  -  | - | Usuário que inseriu no banco de dados |
+| data_alteracao  | DATETIME  |  -  | - | Data de inserção|
+
+<br>
+
 <h3>LOG_HISTORICO_ALUNOS</h3>
+A tabela LOG_HISTORICO_ALUNOS apresenta o histórico de tentativas de inserção de dados (sucedidas ou não) na tabela historico_aluno.
+<br><br>
+
+| Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
+| ----------------- | ------------- |------------- | ------------- | ------------- |
+| id_pedido  | INT  |  - | - | ID do pedido |
+| user |  VARCHAR(100)  | -  | - | Usuário que inseriu/tentou inserir no banco de dados |
+| data_hora | DATETIME  |  -  | -  | Data de inserção e/ou tentativa|
+
+<br>
 
 <br><br>
 <h2>Views</h2>
@@ -184,4 +206,17 @@ Os triggers foram elaborados juntamente com as tabelas de log/auditoria (LOG_ALU
 <img src="https://imgtr.ee/images/2023/07/22/e9df40c650169533ad3b1773a8f0f47a.png" alt="e9df40c650169533ad3b1773a8f0f47a.png" border="0">
 <br>
 
-<h2>Usuários</h2>
+<h2>Usuários e permissões</h2>
+Foram criados três perfis de usuários diferentes para manipulação dos dados do banco, são eles:<br>
+- RH; <br>
+- Financeiro;<br>
+- Administrativo;<br>
+<br>
+<h3>RH</h3>
+
+| Descrição  | DML | Grants |
+| ---- | ------ |-----------| 
+| Leitura | SELECT |  Sim |
+| Inserção | INSERT |  Não |
+| Atualização | UPDATE |  Não |
+| Remoção | DELETE | Não |
