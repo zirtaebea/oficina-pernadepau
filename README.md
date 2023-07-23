@@ -11,8 +11,9 @@ O projeto contempla o desenvolvimento de um banco de dados relacionais para a Of
 6) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/05_oficina_triggers.sql">Triggers</a><br>
 7) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/06_oficina_users.sql">Usuários</a><br>
 
-<br><br>
+<br>
 Observação: É importante que os scripts sejam rodados na ordem indicada pela numeração.
+<br>
 
 <h2>Entidades, atributos e relacionamentos</h2>
 Para a composição do banco de dados, foram definidas <b>cinco</b> entidades <br>
