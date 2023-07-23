@@ -213,6 +213,8 @@ Foram criados três perfis de usuários diferentes para manipulação dos dados 
 - Administrativo;<br>
 <br>
 <h3>RH</h3>
+O perfil RH é destinado para o setor de Recursos Humanos e só está permitido a acessar os dados de todas as tabelas pelo modo de leitura (SELECT). 
+<br><br>
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
@@ -224,23 +226,26 @@ Foram criados três perfis de usuários diferentes para manipulação dos dados 
 <br>
 
 <h3>Financeiro</h3>
+O perfil Financeiro é destinado para o setor de contabilidade. O usuário poderá ler os dados de todas as tabelas (SELECT) mas apenas pode inserir ou modificar (INSERT, UPDATE) os dados das tabelas pedidos e financeiro. 
+<br><br>
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim | turmas, alunos e historico alunos  |
+| Leitura | SELECT |  Sim | turmas, alunos, financeiro, pedidos e historico_alunos  |
 | Inserção | INSERT |  Sim |  financeiro e pedidos |
 | Atualização | UPDATE |  Sim | financeiro e pedidos |  
 | Remoção | DELETE | Não |  -   |
 
-
 <br>
 
 <h3>Administrativo</h3>
+O perfil Administrativo está destinado ao setor de administração e poderá ler os dados de todas as tabelas (SELECT) mas apenas inserir ou modificar (INSERT, UPDATE) os dados das tabelas turmas, alunos e historico_alunos.
+<br><br>
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
 | Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos e historico_alunos |
-| Inserção | INSERT |  Sim |  turmas, alunos e historico alunos |
-| Atualização | UPDATE | Sim | turmas, alunos e historico alunos |  
+| Inserção | INSERT |  Sim |  turmas, alunos e historico_alunos |
+| Atualização | UPDATE | Sim | turmas, alunos e historico_alunos |  
 | Remoção | DELETE | Não |  -   |
 
