@@ -3,7 +3,7 @@
 
 CREATE OR REPLACE VIEW pagamento_alunos AS
 	(	SELECT h.n_matricula, p.id_pedido, a.nome, h.contato, f.metodo_pagamento, 
-		p.status_pagamento, f.total_pago
+		f.total_pago
 		FROM alunos a 
 		JOIN historico_alunos h ON (a.id_aluno = h.id_aluno) 
 		JOIN pedidos p ON (p.id_pedido = h.id_pedido)
