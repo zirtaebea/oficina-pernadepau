@@ -1,4 +1,4 @@
-use Projeto_final;
+use oficina_db;
 
 -- dados turma
 INSERT INTO turmas (horario_turma, qt_aulas) VALUES
