@@ -1,6 +1,4 @@
 -- 1) log de alunos
-use Projeto_final;
-
 -- TABELA DO LOG
 CREATE TABLE LOG_ALUNOS (
     id_aluno INT PRIMARY KEY,
