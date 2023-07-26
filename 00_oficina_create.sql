@@ -1,5 +1,5 @@
-CREATE database Projeto_final;
-use Projeto_final;
+CREATE database oficina_db;
+use oficina_db;
 
 -- criando tabelas
 CREATE TABLE historico_alunos (
