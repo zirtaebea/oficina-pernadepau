@@ -179,7 +179,7 @@ As funções criadas para esse banco de dados foram a receita_total e a total_ta
 <br>
 
  <h2>Stored Procedures</h2>
- Foram elaborados dois storage procedures, um de ordenamento de tabelas e outro para inserção de novos alunos na tabela alunos.
+ Foram elaborados dois stored procedures, um de ordenamento de tabelas e outro para inserção de novos alunos na tabela alunos.
 
  <h3>ordem_tabela</h3>
  Ordena qualquer tabela do banco de dados a partir de três parâmetros: t_nome (nome da tabela), col_campo (campo de referência para o ordenamento) e ordem (ascendente ou descendente).
