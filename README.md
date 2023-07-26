@@ -1,6 +1,13 @@
 <h1>Banco de dados para a Oficina de Perna-de-Pau</h1>
 O projeto contempla o desenvolvimento de um banco de dados relacionais para a Oficina Perna-de-Pau.
 
+<h2>Sobre</h2>
+A Oficina Perna de Pau é a atual maior escola, que oferece aulas de perna de pau no Rio de Janeiro.
+<br><br>
+Com o crescimento de seu número de alunos, intensificou-se a necessidade de uma preparação mais adequada dos dados gerados a partir dessas aulas para um crescimento mais saudável utilizando inteligência de negócio para melhorar a gestão do negócio.
+<br><br>
+O grande volume de informações descentralizadas foi se tornando um obstáculo no crescimento do negócio. Uma vez que o tempo utilizado na organização do próprio negócio poderia ser melhor administrado para questões relacionadas a negociação e fechamento das vendas. 
+
 <h2>Scripts</h2>
 
 1) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/00_oficina_create.sql">Criação de tabelas</a><br>
