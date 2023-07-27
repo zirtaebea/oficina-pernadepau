@@ -135,7 +135,6 @@ A tabela LOG_HISTORICO_ALUNOS apresenta o histórico de tentativas de inserção
 | user |  VARCHAR(100)  | -  | - | Usuário que inseriu/tentou inserir no banco de dados |
 | data_hora | DATETIME  |  -  | -  | Data de inserção e/ou tentativa|
 
-<br>
 
 <br><br>
 <h2>Views</h2>
@@ -281,7 +280,7 @@ SELECT * FROM alunos;
 
 ```
 Poderá consultar posteriormente as inserções realizadas na tabela por meio da tabela de auditoria `LOG_ALUNOS`.
-<br><br><br>
+<br><br>
 
 <h4>Inserindo registros na tabela financeiro</h4>
 
@@ -295,7 +294,7 @@ Ao consultar a tabela `financeiro` podemos verificar os dados inseridos:
 SELECT * FROM financeiro;
 
 ```
-<br><br><br>
+<br><br>
 
 <h4>Inserindo registros na tabela pedidos</h4>
 
@@ -309,7 +308,7 @@ Podemos verificar os dados inseridos na tabela `pedidos`:
 SELECT * FROM pedidos;
 
 ```
-
+<br><br>
 <h4>Inserindo registros na tabela historico_alunos </h4>
 Antes é preciso saber que, para inserir um aluno na tabela de histórico de alunos, o aluno deverá ter pago a mensalidade ou o valor integral da oficina. Caso não aconteça, sua matricula não será efetivada. Portanto, tente executar: 
 
