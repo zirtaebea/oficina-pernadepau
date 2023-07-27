@@ -260,3 +260,50 @@ O perfil Administrativo está destinado ao setor de administração e poderá le
 | Atualização | UPDATE | Sim | turmas, alunos e historico_alunos |  
 | Remoção | DELETE | Não |  -   |
 
+<h3>Exemplos de utilização</h3>
+<h4>Inserindo um novo aluno na tabela alunos</h4>
+
+Podemos tentar inserir novos dados com o seguinte código: 
+```
+INSERT INTO alunos (id_turma, nome, data_nascimento, contato, data_insc, experiencia, expectativas)
+VALUES (2, 'Lucas Santos', '1992-03-20', '(31) 12345-6789', '2023-07-26', 1, 'Espero aprender muito sobre o assunto.');
+
+```
+Caso preferir, poderá usar também o stored procedure `novo_aluno`:
+
+```
+CALL novo_aluno('Joana Silva', '1998-08-25', 3, '(41) 98765-4321', '2023-07-26', 1, 'Tenho interesse em aprender novas técnicas.');
+
+```
+O resultado dos exemplos consultando na tabela `alunos` será o seguinte: 
+```
++----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
+| id_aluno | id_turma | nome             | data_nascimento | contato         | data_insc  | experiencia              | expectativas                                                            |
++----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
+|        1 |        1 | João Silva       | 1995-05-15      | (11) 98765-4321 | 2023-07-25 | 0x01                     | Espero aprender muito nesta turma.                                      |
+|        2 |        2 | Maria Souza      | 1998-12-10      | (21) 99876-5432 | 2023-07-26 | 0x01                     | Estou ansiosa para começar.                                             |
+|        3 |        3 | Pedro Santos     | 1990-09-22      | (31) 87654-3210 | 2023-07-25 | 0x00                     | Gostaria de aprimorar minhas habilidades.                               |
+|        4 |        1 | Ana Oliveira     | 2000-03-05      | (51) 91234-5678 | 2023-07-27 | 0x01                     | Mal posso esperar para aprender mais.                                   |
+|        5 |        2 | Carlos Mendes    | 1997-11-18      | (11) 93245-6789 | 2023-07-30 | 0x01                     | Tenho interesse em desenvolver novas habilidades.                       |
+|        6 |        2 | Larissa Oliveira | 1997-06-30      | (11) 91234-5678 | 2023-07-27 | 0x01                     | Estou animada para participar.                                          |
+|        7 |        3 | Fernando Mendes  | 1993-11-18      | (21) 93245-6789 | 2023-07-30 | 0x00                     | Espero melhorar minhas habilidades.                                     |
+|        8 |        1 | Camila Rodrigues | 1998-03-05      | (31) 91234-5678 | 2023-07-27 | 0x01                     | Ansiosa para aprender mais.                                             |
+|        9 |        2 | Lucas Sousa      | 1994-09-15      | (51) 99876-5432 | 2023-07-26 | 0x01                     | Quero aprimorar minhas técnicas.                                        |
+|       10 |        3 | Amanda Lima      | 2002-07-12      | (11) 93245-6789 | 2023-07-30 | 0x00                     | Dedicada em aprender tudo que puder.                                    |
+|       11 |        1 | Rafaela Santos   | 1996-04-22      | (21) 98765-4321 | 2023-07-25 | 0x01                     | Estou empolgada para aprender novas técnicas.                           |
+|       12 |        2 | Gustavo Silva    | 1999-12-05      | (31) 99876-5432 | 2023-07-26 | 0x01                     | Quero me especializar na área.                                          |
+|       13 |        3 | Fernanda Souza   | 1991-08-17      | (51) 91234-5678 | 2023-07-27 | 0x01                     | Espero que seja uma experiência enriquecedora.                          |
+|       14 |        1 | Marcelo Oliveira | 1997-11-28      | (11) 99876-5432 | 2023-07-28 | 0x00                     | Estou começando agora e tenho muito a aprender.                         |
+|       15 |        2 | Carolina Mendes  | 1995-03-10      | (21) 98765-4321 | 2023-07-30 | 0x00                     | Ansiosa para desenvolver minhas habilidades.                            |
+|       16 |        1 | Julia Ferreira   | 1992-12-05      | (11) 98765-1111 | 2023-08-01 | 0x01                     | Tenho interesse em programação e quero aprofundar meus conhecimentos.   |
+|       17 |        2 | Lucas Santos     | 1992-03-20      | (31) 12345-6789 | 2023-07-26 | 0x01                     | Espero aprender muito sobre o assunto.                                  |
+|       18 |        3 | Joana Silva      | 1998-08-25      | (41) 98765-4321 | 2023-07-26 | 0x01                     | Tenho interesse em aprender novas técnicas.                             |
++----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
+
+```
+Poderá consultar posteriormente as inserções realizadas na tabela por meio da tabela de auditoria `LOG_ALUNOS`
+<h4>Inserindo registros na tabela financeiro</h4>
+<h4>Inserindo registros na tabela pedidos</h4>
+<h4>Checando restrições de usuário</h4>
+<h4>Logs de auditoria</h4>
+
