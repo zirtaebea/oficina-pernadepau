@@ -275,31 +275,9 @@ Caso preferir, poderá usar também o stored procedure `novo_aluno`:
 CALL novo_aluno('Joana Silva', '1998-08-25', 3, '(41) 98765-4321', '2023-07-26', 1, 'Tenho interesse em aprender novas técnicas.');
 
 ```
-O resultado dos exemplos consultando na tabela `alunos` será o seguinte: 
+O resultado dos exemplos consultando na tabela `alunos` : 
 ```
 SELECT * FROM alunos;
-+----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
-| id_aluno | id_turma | nome             | data_nascimento | contato         | data_insc  | experiencia              | expectativas                                                            |
-+----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
-|        1 |        1 | João Silva       | 1995-05-15      | (11) 98765-4321 | 2023-07-25 | 0x01                     | Espero aprender muito nesta turma.                                      |
-|        2 |        2 | Maria Souza      | 1998-12-10      | (21) 99876-5432 | 2023-07-26 | 0x01                     | Estou ansiosa para começar.                                             |
-|        3 |        3 | Pedro Santos     | 1990-09-22      | (31) 87654-3210 | 2023-07-25 | 0x00                     | Gostaria de aprimorar minhas habilidades.                               |
-|        4 |        1 | Ana Oliveira     | 2000-03-05      | (51) 91234-5678 | 2023-07-27 | 0x01                     | Mal posso esperar para aprender mais.                                   |
-|        5 |        2 | Carlos Mendes    | 1997-11-18      | (11) 93245-6789 | 2023-07-30 | 0x01                     | Tenho interesse em desenvolver novas habilidades.                       |
-|        6 |        2 | Larissa Oliveira | 1997-06-30      | (11) 91234-5678 | 2023-07-27 | 0x01                     | Estou animada para participar.                                          |
-|        7 |        3 | Fernando Mendes  | 1993-11-18      | (21) 93245-6789 | 2023-07-30 | 0x00                     | Espero melhorar minhas habilidades.                                     |
-|        8 |        1 | Camila Rodrigues | 1998-03-05      | (31) 91234-5678 | 2023-07-27 | 0x01                     | Ansiosa para aprender mais.                                             |
-|        9 |        2 | Lucas Sousa      | 1994-09-15      | (51) 99876-5432 | 2023-07-26 | 0x01                     | Quero aprimorar minhas técnicas.                                        |
-|       10 |        3 | Amanda Lima      | 2002-07-12      | (11) 93245-6789 | 2023-07-30 | 0x00                     | Dedicada em aprender tudo que puder.                                    |
-|       11 |        1 | Rafaela Santos   | 1996-04-22      | (21) 98765-4321 | 2023-07-25 | 0x01                     | Estou empolgada para aprender novas técnicas.                           |
-|       12 |        2 | Gustavo Silva    | 1999-12-05      | (31) 99876-5432 | 2023-07-26 | 0x01                     | Quero me especializar na área.                                          |
-|       13 |        3 | Fernanda Souza   | 1991-08-17      | (51) 91234-5678 | 2023-07-27 | 0x01                     | Espero que seja uma experiência enriquecedora.                          |
-|       14 |        1 | Marcelo Oliveira | 1997-11-28      | (11) 99876-5432 | 2023-07-28 | 0x00                     | Estou começando agora e tenho muito a aprender.                         |
-|       15 |        2 | Carolina Mendes  | 1995-03-10      | (21) 98765-4321 | 2023-07-30 | 0x00                     | Ansiosa para desenvolver minhas habilidades.                            |
-|       16 |        1 | Julia Ferreira   | 1992-12-05      | (11) 98765-1111 | 2023-08-01 | 0x01                     | Tenho interesse em programação e quero aprofundar meus conhecimentos.   |
-|       17 |        2 | Lucas Santos     | 1992-03-20      | (31) 12345-6789 | 2023-07-26 | 0x01                     | Espero aprender muito sobre o assunto.                                  |
-|       18 |        3 | Joana Silva      | 1998-08-25      | (41) 98765-4321 | 2023-07-26 | 0x01                     | Tenho interesse em aprender novas técnicas.                             |
-+----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
 
 ```
 Poderá consultar posteriormente as inserções realizadas na tabela por meio da tabela de auditoria `LOG_ALUNOS`.
@@ -311,32 +289,10 @@ Poderá consultar posteriormente as inserções realizadas na tabela por meio da
 INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estornaveis, v_liquido, estornado) VALUES ('Boleto', 400, 50, 0, 350, 0);
 INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estornaveis, v_liquido, estornado) VALUES ('Dinheiro', 300, 0, 0, 300, 0);
 ```
-Ao consultar a tabela `financeiro` podemos verificar a seguinte tabela:
+Ao consultar a tabela `financeiro` podemos verificar os dados inseridos:
 
 ```
 SELECT * FROM financeiro;
-+--------------+---------------------+------------+----------------+------------------+-----------+-----------+
-| id_transacao | metodo_pagamento    | total_pago | vt_estornaveis | vt_n_estornaveis | v_liquido | estornado |
-+--------------+---------------------+------------+----------------+------------------+-----------+-----------+
-|            1 | Cartão de Crédito   |        500 |             50 |                0 |       450 |         0 |
-|            2 | Boleto              |        300 |              0 |                0 |       300 |         0 |
-|            3 | Transferência       |        200 |              0 |                0 |       200 |         0 |
-|            4 | Pix                 |        500 |              0 |                0 |       500 |         0 |
-|            5 | Dinheiro            |        150 |              0 |                0 |       150 |         0 |
-|            6 | Cartão de Débito    |        500 |             50 |                0 |       450 |         0 |
-|            7 | Boleto              |        350 |              0 |                0 |       350 |         0 |
-|            8 | Transferência       |        500 |              0 |                0 |       500 |         0 |
-|            9 | Pix                 |        500 |              0 |                0 |       500 |         0 |
-|           10 | Dinheiro            |        150 |              0 |                0 |       150 |         0 |
-|           11 | Cartão de Crédito   |        500 |             50 |                0 |       450 |         0 |
-|           12 | Pix                 |        350 |              0 |                0 |       350 |         0 |
-|           13 | Transferência       |        250 |              0 |                0 |       250 |         0 |
-|           14 | Pix                 |        500 |              0 |                0 |       500 |         0 |
-|           15 | Dinheiro            |        500 |              0 |                0 |       500 |         0 |
-|           16 | Cartão de Crédito   |        250 |             20 |                5 |       225 |         0 |
-|           17 | Boleto              |        400 |             50 |                0 |       350 |         0 |
-|           18 | Dinheiro            |        300 |              0 |                0 |       300 |         0 |
-+--------------+---------------------+------------+----------------+------------------+-----------+-----------+
 
 ```
 <br><br><br>
@@ -344,35 +300,13 @@ SELECT * FROM financeiro;
 <h4>Inserindo registros na tabela pedidos</h4>
 
 ```
-INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (17, 17, 'Pendente');
-INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (18, 18, 'Pago');
+INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (16, 16, 'Pendente');
+INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (17, 17, 'Pago');
 ```
 Podemos verificar os dados inseridos na tabela `pedidos`:
 
 ```
 SELECT * FROM pedidos;
-+-----------+----------+--------------+------------------+
-| id_pedido | id_aluno | id_transacao | status_pagamento |
-+-----------+----------+--------------+------------------+
-|         1 |        1 |            1 | Pago             |
-|         2 |        2 |            2 | Pendente         |
-|         3 |        3 |            3 | Pago             |
-|         4 |        4 |            4 | Pendente         |
-|         5 |        5 |            5 | Pago             |
-|         6 |        6 |            6 | Recusado         |
-|         7 |        7 |            7 | Pendente         |
-|         8 |        8 |            8 | Pago             |
-|         9 |        9 |            9 | Pendente         |
-|        10 |       10 |           10 | Pago             |
-|        11 |       11 |           11 | Recusado         |
-|        12 |       12 |           12 | Pendente         |
-|        13 |       13 |           13 | Pago             |
-|        14 |       14 |           14 | Pendente         |
-|        15 |       15 |           15 | Pago             |
-|        18 |       16 |           16 | Pago             |
-|        19 |       17 |           17 | Pendente         |
-|        20 |       18 |           18 | Pago             |
-+-----------+----------+--------------+------------------+
 
 ```
 
@@ -380,10 +314,25 @@ SELECT * FROM pedidos;
 Antes é preciso saber que, para inserir um aluno na tabela de histórico de alunos, o aluno deverá ter pago a mensalidade ou o valor integral da oficina. Caso não aconteça, sua matricula não será efetivada. Portanto, tente executar: 
 
 ```
+INSERT INTO historico_alunos (id_pedido, id_turma, frequencia, aluno_ativo) VALUES (16, 2, 80, 1);
+INSERT INTO historico_alunos (id_pedido, id_turma, frequencia, aluno_ativo) VALUES (17, 3, 95, 1);
 
+```
+Provavelmente, por conta do trigger `TR_LOG_HISTORICO` você não irá conseguir inserir os dados na tabela, uma vez que o aluno não efetuou o pagamento. Para alterar o dado e assim inserir podemos realizar a seguinte modificação:
+```
+UPDATE pedidos SET status_pagamento = 'Pago' WHERE id_pedido = 16;
+```
+Após isso, tente novamente inserir os dados na tabela de histórico de aluno:
+
+```
+INSERT INTO historico_alunos (id_pedido, id_turma, frequencia, aluno_ativo) VALUES (16, 2, 80, 1);
 
 ```
 
-
 <h4>Logs de auditoria</h4>
+Para consultar as tabelas de auditoria:
 
+```
+SELECT * FROM LOG_ALUNOS; 
+SELECT * FROM LOG_HISTORICO_ALUNOS;
+```
