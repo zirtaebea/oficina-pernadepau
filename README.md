@@ -107,7 +107,7 @@ A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-
 | id_pedido  |  INT | FK | FK_HISTORICO_ALUNOS_ID_PEDIDO | ID do pedido |
 | id_turma | INT  | FK | FK_HISTORICO_ALUNOS_ID_TURMA | ID da turma |
 | frequencia | INT  | - | -  | Frequência nas aulas |
-| frequencia | INT  | - | -  | Frequência nas aulas |
+| aluno_ativo | INT  | - | -  | Aluno ativo ou se já finalizou a oficina. |
 
 <br><br>
 
@@ -142,9 +142,9 @@ A tabela LOG_HISTORICO_ALUNOS apresenta o histórico de tentativas de inserção
 Para otimizar consultas na tabela, foram criadas 5 views, sendo elas pagamento_alunos, alunos_turma, expectativas_experiencia, contatos e alunos_por_turma. 
 
 <h3>pagamento_alunos</h3>
-A view pagamento_alunos possui os dados pessoais de cada aluno juntamente com as informações financeiras, para verificar se algum aluno pagou ou não a mensalidade.
+A view pagamento_alunos possui os dados pessoais de cada aluno juntamente com as informações financeiras, para verificar se algum aluno pagou ou não a mensalidade e quanto falta para ser pago.
 <br><br>
-<img src="https://imgtr.ee/images/2023/07/22/a51799760a2bc1a398c97a9bd7f7293d.png" alt="a51799760a2bc1a398c97a9bd7f7293d.png" border="0">
+<img src="https://imgtr.ee/images/2023/07/27/20e3cccc61e422b9fcd2affa0fa931a2.png" alt="20e3cccc61e422b9fcd2affa0fa931a2.png" border="0">
 <br>
 
 <h3>alunos_turma</h3>
@@ -198,7 +198,7 @@ As funções criadas para esse banco de dados foram a receita_total e a total_ta
 <h3>novo_aluno</h3>
 Insere um novo aluno na tabela alunos, recebendo como parâmetro: a_nome (nome do aluno), a_dnasc (data de nascimento) e turma (número da turma).
 <br><br>
-<img src="https://imgtr.ee/images/2023/07/22/709b7e79e9870f8492782d24201889e6.png" alt="709b7e79e9870f8492782d24201889e6.png" border="0">
+<img src="https://imgtr.ee/images/2023/07/27/530fc375423c52a0f9d35f5d741a4f71.png" alt="530fc375423c52a0f9d35f5d741a4f71.png" border="0">
 <br>
 
 
@@ -208,7 +208,7 @@ Os triggers foram elaborados juntamente com as tabelas de log/auditoria (LOG_ALU
 <h3>TR_LOG_ALUNOS</h3>
 É acionado depois que um novo aluno é inserido no banco de dados. O registro de inserção é salvo na tabela LOG_ALUNOS e conta com os dados do aluno inserido, o usuário que fez o procedimento e o momento (data e hora).
 <br><br>
-<img src="https://imgtr.ee/images/2023/07/22/d7d72874ae787440740a75ed5edfde54.png" alt="d7d72874ae787440740a75ed5edfde54.png" border="0">
+<img src="https://imgtr.ee/images/2023/07/27/2fd093529e3f8bff36c9a29217fdafdd.png" alt="2fd093529e3f8bff36c9a29217fdafdd.png" border="0">
 <br>
 
 <h3>TR_LOG_HISTORICO_ALUNOS</h3>
