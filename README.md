@@ -301,9 +301,51 @@ O resultado dos exemplos consultando na tabela `alunos` será o seguinte:
 +----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
 
 ```
-Poderá consultar posteriormente as inserções realizadas na tabela por meio da tabela de auditoria `LOG_ALUNOS`
+Poderá consultar posteriormente as inserções realizadas na tabela por meio da tabela de auditoria `LOG_ALUNOS`.
+<br><br><br>
+
 <h4>Inserindo registros na tabela financeiro</h4>
+
+```
+INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estornaveis, v_liquido, estornado) VALUES ('Boleto', 400, 50, 0, 350, 0);
+
+```
+Ao consultar a tabela `financeiro` podemos verificar a seguinte tabela:
+
+```
++--------------+---------------------+------------+----------------+------------------+-----------+-----------+
+| id_transacao | metodo_pagamento    | total_pago | vt_estornaveis | vt_n_estornaveis | v_liquido | estornado |
++--------------+---------------------+------------+----------------+------------------+-----------+-----------+
+|            1 | Cartão de Crédito   |        500 |             50 |                0 |       450 |         0 |
+|            2 | Boleto              |        300 |              0 |                0 |       300 |         0 |
+|            3 | Transferência       |        200 |              0 |                0 |       200 |         0 |
+|            4 | Pix                 |        500 |              0 |                0 |       500 |         0 |
+|            5 | Dinheiro            |        150 |              0 |                0 |       150 |         0 |
+|            6 | Cartão de Débito    |        500 |             50 |                0 |       450 |         0 |
+|            7 | Boleto              |        350 |              0 |                0 |       350 |         0 |
+|            8 | Transferência       |        500 |              0 |                0 |       500 |         0 |
+|            9 | Pix                 |        500 |              0 |                0 |       500 |         0 |
+|           10 | Dinheiro            |        150 |              0 |                0 |       150 |         0 |
+|           11 | Cartão de Crédito   |        500 |             50 |                0 |       450 |         0 |
+|           12 | Pix                 |        350 |              0 |                0 |       350 |         0 |
+|           13 | Transferência       |        250 |              0 |                0 |       250 |         0 |
+|           14 | Pix                 |        500 |              0 |                0 |       500 |         0 |
+|           15 | Dinheiro            |        500 |              0 |                0 |       500 |         0 |
+|           16 | Cartão de Crédito   |        250 |             20 |                5 |       225 |         0 |
+|           17 | Boleto              |        400 |             50 |                0 |       350 |         0 |
+|           18 | Dinheiro            |        300 |              0 |                0 |       300 |         0 |
++--------------+---------------------+------------+----------------+------------------+-----------+-----------+
+
+```
+<br><br><br>
+
 <h4>Inserindo registros na tabela pedidos</h4>
+
+
+
 <h4>Checando restrições de usuário</h4>
+
+
+
 <h4>Logs de auditoria</h4>
 
