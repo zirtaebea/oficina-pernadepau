@@ -34,7 +34,7 @@ BEGIN
                 FROM pedidos p 
                 WHERE p.id_pedido = NEW.id_pedido);
 
-    IF PEDIDO = 'aprovado' THEN
+    IF PEDIDO = 'Pago' THEN
 		INSERT INTO LOG_HISTORICO_ALUNOS VALUES (NEW.id_pedido, SESSION_USER(), NOW());
     ELSE
     SIGNAL SQLSTATE '45000'

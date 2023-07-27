@@ -38,9 +38,14 @@ SHOW GRANTS FOR 'rh'@'localhost';
 GRANT SELECT, UPDATE, INSERT ON oficina_db.historico_alunos TO 'administrativo'@'localhost';
 GRANT SELECT, UPDATE, INSERT ON oficina_db.alunos TO 'administrativo'@'localhost';
 GRANT SELECT, UPDATE, INSERT ON oficina_db.turmas TO 'administrativo'@'localhost';
+GRANT SELECT, UPDATE, INSERT ON oficina_db.LOG_ALUNOS TO 'administrativo'@'localhost';
+GRANT SELECT, UPDATE, INSERT ON oficina_db.LOG_HISTORICO_ALUNOS TO 'administrativo'@'localhost';
+GRANT EXECUTE ON PROCEDURE oficina_db.novo_aluno TO 'administrativo'@'localhost';
+
 -- modo leitura em pedidos e financeiro
 GRANT SELECT ON oficina_db.pedidos TO 'administrativo'@'localhost';
 GRANT SELECT ON oficina_db.financeiro TO 'administrativo'@'localhost';
+
 
 -- mostrando permissões
 SHOW GRANTS FOR 'administrativo'@'localhost';
