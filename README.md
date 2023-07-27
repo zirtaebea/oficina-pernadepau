@@ -109,7 +109,7 @@ A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-
 | frequencia | INT  | - | -  | Frequência nas aulas |
 | aluno_ativo | INT  | - | -  | Aluno ativo ou se já finalizou a oficina. |
 
-<br><br>
+<br>
 
 <h2>Tabelas de auditoria</h2>
 <h3>LOG_ALUNOS</h3>
@@ -136,7 +136,7 @@ A tabela LOG_HISTORICO_ALUNOS apresenta o histórico de tentativas de inserção
 | data_hora | DATETIME  |  -  | -  | Data de inserção e/ou tentativa|
 
 
-<br><br>
+<br>
 <h2>Views</h2>
 Para otimizar consultas na tabela, foram criadas 5 views, sendo elas pagamento_alunos, alunos_turma, expectativas_experiencia, contatos e alunos_por_turma. 
 
