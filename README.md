@@ -308,7 +308,7 @@ Poderá consultar posteriormente as inserções realizadas na tabela por meio da
 
 ```
 INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estornaveis, v_liquido, estornado) VALUES ('Boleto', 400, 50, 0, 350, 0);
-
+INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estornaveis, v_liquido, estornado) VALUES ('Dinheiro', 300, 0, 0, 300, 0);
 ```
 Ao consultar a tabela `financeiro` podemos verificar a seguinte tabela:
 
@@ -341,9 +341,39 @@ Ao consultar a tabela `financeiro` podemos verificar a seguinte tabela:
 
 <h4>Inserindo registros na tabela pedidos</h4>
 
+```
+INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (17, 17, 'Pendente');
+INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (18, 18, 'Pago');
+```
+Podemos verificar os dados inseridos na tabela `pedidos`:
 
+```
++-----------+----------+--------------+------------------+
+| id_pedido | id_aluno | id_transacao | status_pagamento |
++-----------+----------+--------------+------------------+
+|         1 |        1 |            1 | Pago             |
+|         2 |        2 |            2 | Pendente         |
+|         3 |        3 |            3 | Pago             |
+|         4 |        4 |            4 | Pendente         |
+|         5 |        5 |            5 | Pago             |
+|         6 |        6 |            6 | Recusado         |
+|         7 |        7 |            7 | Pendente         |
+|         8 |        8 |            8 | Pago             |
+|         9 |        9 |            9 | Pendente         |
+|        10 |       10 |           10 | Pago             |
+|        11 |       11 |           11 | Recusado         |
+|        12 |       12 |           12 | Pendente         |
+|        13 |       13 |           13 | Pago             |
+|        14 |       14 |           14 | Pendente         |
+|        15 |       15 |           15 | Pago             |
+|        18 |       16 |           16 | Pago             |
+|        19 |       17 |           17 | Pendente         |
+|        20 |       18 |           18 | Pago             |
++-----------+----------+--------------+------------------+
 
-<h4>Checando restrições de usuário</h4>
+```
+
+<h4>Inserindo </h4>
 
 
 
