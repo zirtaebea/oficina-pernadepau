@@ -277,6 +277,7 @@ CALL novo_aluno('Joana Silva', '1998-08-25', 3, '(41) 98765-4321', '2023-07-26',
 ```
 O resultado dos exemplos consultando na tabela `alunos` será o seguinte: 
 ```
+SELECT * FROM alunos;
 +----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
 | id_aluno | id_turma | nome             | data_nascimento | contato         | data_insc  | experiencia              | expectativas                                                            |
 +----------+----------+------------------+-----------------+-----------------+------------+--------------------------+-------------------------------------------------------------------------+
@@ -313,6 +314,7 @@ INSERT INTO financeiro (metodo_pagamento, total_pago, vt_estornaveis, vt_n_estor
 Ao consultar a tabela `financeiro` podemos verificar a seguinte tabela:
 
 ```
+SELECT * FROM financeiro;
 +--------------+---------------------+------------+----------------+------------------+-----------+-----------+
 | id_transacao | metodo_pagamento    | total_pago | vt_estornaveis | vt_n_estornaveis | v_liquido | estornado |
 +--------------+---------------------+------------+----------------+------------------+-----------+-----------+
@@ -348,6 +350,7 @@ INSERT INTO pedidos (id_aluno, id_transacao, status_pagamento) VALUES (18, 18, '
 Podemos verificar os dados inseridos na tabela `pedidos`:
 
 ```
+SELECT * FROM pedidos;
 +-----------+----------+--------------+------------------+
 | id_pedido | id_aluno | id_transacao | status_pagamento |
 +-----------+----------+--------------+------------------+
@@ -373,8 +376,13 @@ Podemos verificar os dados inseridos na tabela `pedidos`:
 
 ```
 
-<h4>Inserindo </h4>
+<h4>Inserindo registros na tabela historico_alunos </h4>
+Antes é preciso saber que, para inserir um aluno na tabela de histórico de alunos, o aluno deverá ter pago a mensalidade ou o valor integral da oficina. Caso não aconteça, sua matricula não será efetivada. Portanto, tente executar: 
 
+```
+
+
+```
 
 
 <h4>Logs de auditoria</h4>
