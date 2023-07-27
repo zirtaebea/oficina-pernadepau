@@ -228,7 +228,7 @@ O perfil RH é destinado para o setor de Recursos Humanos e só está permitido 
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos e historico_alunos |
+| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos, historico_alunos, Views|
 | Inserção | INSERT |  Não |  -  |
 | Atualização | UPDATE |  Não | -  |  
 | Remoção | DELETE | Não |   -  |
@@ -241,7 +241,7 @@ O perfil Financeiro é destinado para o setor de contabilidade. O usuário poder
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim | turmas, alunos, financeiro, pedidos e historico_alunos  |
+| Leitura | SELECT |  Sim | turmas, alunos, financeiro, pedidos, historico_alunos, View pagamento_alunos |
 | Inserção | INSERT |  Sim |  financeiro e pedidos |
 | Atualização | UPDATE |  Sim | financeiro e pedidos |  
 | Remoção | DELETE | Não |  -   |
@@ -254,7 +254,7 @@ O perfil Administrativo está destinado ao setor de administração e poderá le
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos e historico_alunos |
+| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos, historico_alunos, LOG_ALUNOS, LOG_HISTORICO_ALUNOS, Views e Stored Procedures |
 | Inserção | INSERT |  Sim |  turmas, alunos e historico_alunos |
 | Atualização | UPDATE | Sim | turmas, alunos e historico_alunos |  
 | Remoção | DELETE | Não |  -   |
