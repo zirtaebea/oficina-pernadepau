@@ -33,7 +33,7 @@ Para a composição do banco de dados, foram definidas <b>cinco</b> entidades <b
 <br>
 Os atributos e relacionamentos entre as entidades definidas podem ser vistos no diagrama a seguir: 
 <br><br>
-<img src="https://imgtr.ee/images/2023/07/22/d278e061200ff4c27f068cc99c9d2f69.png" alt="d278e061200ff4c27f068cc99c9d2f69.png" border="0">
+<img src="https://imgtr.ee/images/2023/07/27/36bff173c183f77a31f18b49ecb94d19.png" alt="36bff173c183f77a31f18b49ecb94d19.png" border="0">
 <br>
 
 <h2>Tabelas</h2>
@@ -59,9 +59,13 @@ A tabela alunos contém os dados pessoais dos alunos, como nome e data de nascim
 | Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
 | ----------------- | ------------- |------------- | ------------- | ------------- |
 | id_aluno | INT  |  PK  | PRIMARY  | ID do aluno  |
+| id_turma | INT  | FK | FK_ALUNOS_ID_TURMA  | ID da turma |
 | nome  | VARCHAR(50)  | - | - | Nome do aluno |
 | data_nascimento | DATE  | - | -  | Data de nascimento |
-| id_turma | INT  | FK | FK_ALUNOS_ID_TURMA  | ID da turma |
+| contato | VARCHAR(20) | -| - | Contato do aluno |
+| data_insc | DATE | -| - | Data de inscrição |
+| experiencia | BIT(1) | - | -  | Experiência com perna-de-pau |
+| expectativas | VARCHAR(200) | - | -  | Expectativas com a oficina |
 
 <br>
 
@@ -87,6 +91,7 @@ A tabela pedidos possui o registro dos pedidos realizados por cada aluno, o id d
 | Nome do atributo  | Tipo do dado | Chave | Índice | Descrição |
 | ----------------- | ------------- |------------- | ------------- | ------------- |
 | id_pedido | INT  |  PK  | PRIMARY  | ID do pedido  |
+| id_aluno | INT  | FK | FK_PEDIDOS_ID_ALUNO | ID do aluno |
 | id_transacao  | INT  | FK | FK_PEDIDOS_ID_TRANSACAO | ID da transação |
 | status_pagamento | VARCHAR(20)  | - | -  | Status de pagamento |
 
@@ -101,11 +106,7 @@ A tabela historico_alunos possui dados dos alunos matriculados na oficina perna-
 | n_matricula  | INT  |  PK  | PRIMARY  | Número de matricula |
 | id_pedido  |  INT | FK | FK_HISTORICO_ALUNOS_ID_PEDIDO | ID do pedido |
 | id_turma | INT  | FK | FK_HISTORICO_ALUNOS_ID_TURMA | ID da turma |
-| id_aluno | INT  | FK | FK_HISTORICO_ALUNOS_ID_ALUNO | ID do aluno |
-| data_insc | DATE | - | -  | Data da inscrição |
-| contato | VARCHAR(20) | - | -  | Número de contato |
-| experiencia | BIT | - | -  | Experiência com perna-de-pau |
-| expectativas | VARCHAR(20) | - | -  | Expectativas com a oficina |
+| frequencia | INT  | - | -  | Frequência nas aulas |
 | frequencia | INT  | - | -  | Frequência nas aulas |
 
 <br><br>
