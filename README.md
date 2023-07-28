@@ -10,13 +10,13 @@ O grande volume de informações descentralizadas foi se tornando um obstáculo 
 
 <h2>Scripts</h2>
 
-1) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/00_oficina_create.sql">Criação de tabelas</a><br>
-2) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/01_oficina_dados.sql">Inserção de dados</a><br>
-3) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/02_oficina_views.sql">Views</a><br>
-4) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/03_oficina_functions.sql">Funções</a><br>
-5) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/04_oficina_stored_procedures.sql">Stored Procedures</a><br>
-6) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/05_oficina_triggers.sql">Triggers</a><br>
-7) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/06_oficina_users.sql">Usuários</a><br>
+1) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/01_oficina_create.sql">Criação de tabelas</a><br>
+2) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/02_oficina_dados.sql">Inserção de dados</a><br>
+3) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/03_oficina_views.sql">Views</a><br>
+4) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/04_oficina_functions.sql">Funções</a><br>
+5) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/05_oficina_stored_procedures.sql">Stored Procedures</a><br>
+6) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/06_oficina_triggers.sql">Triggers</a><br>
+7) <a href="https://github.com/zirtaebea/oficina-pernadepau/blob/main/07_oficina_users.sql">Usuários</a><br>
 
 <br>
 Observação: É importante que os scripts sejam rodados na ordem indicada pela numeração.
