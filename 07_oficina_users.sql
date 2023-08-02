@@ -33,7 +33,7 @@ SHOW GRANTS FOR 'financeiro'@'localhost';
 -- apenas leitura
 GRANT SELECT ON oficina_db.historico_alunos TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.alunos TO 'rh'@'localhost';
-GRANT SELECT ON oficina_db.turma TO 'rh'@'localhost';
+GRANT SELECT ON oficina_db.turmas TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.pedidos TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.financeiro TO 'rh'@'localhost';
 -- stored procedure
