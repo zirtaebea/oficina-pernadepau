@@ -17,15 +17,13 @@ CREATE USER 'administrativo'@'localhost'IDENTIFIED BY 'Administra@1234$';
 GRANT SELECT ON oficina_db.historico_alunos TO 'financeiro'@'localhost';
 GRANT SELECT ON oficina_db.alunos TO 'financeiro'@'localhost';
 GRANT SELECT ON oficina_db.turmas TO 'financeiro'@'localhost';
+-- stored procedure
+GRANT EXECUTE ON PROCEDURE oficina_db.ordem_tabela TO 'financeiro'@'localhost';
 -- modo leitura
 GRANT SELECT, UPDATE, INSERT ON oficina_db.pedidos TO 'financeiro'@'localhost';
 GRANT SELECT, UPDATE, INSERT ON oficina_db.financeiro TO 'financeiro'@'localhost';
 -- views
 GRANT SELECT ON oficina_db.pagamento_alunos TO 'financeiro'@'localhost';
-GRANT SELECT ON oficina_db.alunos_por_turma TO 'financeiro'@'localhost';
-GRANT SELECT ON oficina_db.alunos_turma TO 'financeiro'@'localhost';
-GRANT SELECT ON oficina_db.contatos TO 'financeiro'@'localhost';
-GRANT SELECT ON oficina_db.expectativas_experiencia TO 'financeiro'@'localhost';
 -- mostrando permissões
 SHOW GRANTS FOR 'financeiro'@'localhost';
 
@@ -38,6 +36,8 @@ GRANT SELECT ON oficina_db.alunos TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.turma TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.pedidos TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.financeiro TO 'rh'@'localhost';
+-- stored procedure
+GRANT EXECUTE ON PROCEDURE oficina_db.ordem_tabela TO 'rh'@'localhost';
 -- views
 GRANT SELECT ON oficina_db.pagamento_alunos TO 'rh'@'localhost';
 GRANT SELECT ON oficina_db.alunos_por_turma TO 'rh'@'localhost';
@@ -56,7 +56,9 @@ GRANT SELECT, UPDATE, INSERT ON oficina_db.alunos TO 'administrativo'@'localhost
 GRANT SELECT, UPDATE, INSERT ON oficina_db.turmas TO 'administrativo'@'localhost';
 GRANT SELECT, UPDATE, INSERT ON oficina_db.LOG_ALUNOS TO 'administrativo'@'localhost';
 GRANT SELECT, UPDATE, INSERT ON oficina_db.LOG_HISTORICO_ALUNOS TO 'administrativo'@'localhost';
+-- stored procedures
 GRANT EXECUTE ON PROCEDURE oficina_db.novo_aluno TO 'administrativo'@'localhost';
+GRANT EXECUTE ON PROCEDURE oficina_db.ordem_tabela TO 'administrativo'@'localhost';
 -- views
 GRANT SELECT ON oficina_db.pagamento_alunos TO 'administrativo'@'localhost';
 GRANT SELECT ON oficina_db.alunos_por_turma TO 'administrativo'@'localhost';

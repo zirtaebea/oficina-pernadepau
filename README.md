@@ -223,12 +223,12 @@ Foram criados três perfis de usuários diferentes para manipulação dos dados 
 - Administrativo;<br>
 <br>
 <h3>RH</h3>
-O perfil RH é destinado para o setor de Recursos Humanos e só está permitido a acessar os dados de todas as tabelas pelo modo de leitura (SELECT). 
+O perfil RH é destinado para o setor de Recursos Humanos e só está permitido a acessar os dados de todas as tabelas pelo modo de leitura (SELECT), além das views e do stored procedure `ordem_tabela`
 <br><br>
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos, historico_alunos, Views|
+| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos, historico_alunos, Views e Stored Procedure 'ordem_tabela' |
 | Inserção | INSERT |  Não |  -  |
 | Atualização | UPDATE |  Não | -  |  
 | Remoção | DELETE | Não |   -  |
@@ -236,12 +236,12 @@ O perfil RH é destinado para o setor de Recursos Humanos e só está permitido 
 <br>
 
 <h3>Financeiro</h3>
-O perfil Financeiro é destinado para o setor de contabilidade. O usuário poderá ler os dados de todas as tabelas (SELECT) mas apenas pode inserir ou modificar (INSERT, UPDATE) os dados das tabelas pedidos e financeiro. 
+O perfil Financeiro é destinado para o setor de contabilidade. O usuário poderá ler os dados de todas as tabelas (SELECT) mas apenas pode inserir ou modificar (INSERT, UPDATE) os dados das tabelas pedidos e financeiro, pode acessar a view `pagamento_alunos` e o stored procedure `ordem_tabela`
 <br><br>
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim | turmas, alunos, financeiro, pedidos, historico_alunos, View pagamento_alunos |
+| Leitura | SELECT |  Sim | turmas, alunos, financeiro, pedidos, historico_alunos, View pagamento_alunos e Stored Procedure 'ordem_tabela' |
 | Inserção | INSERT |  Sim |  financeiro e pedidos |
 | Atualização | UPDATE |  Sim | financeiro e pedidos |  
 | Remoção | DELETE | Não |  -   |
@@ -249,12 +249,12 @@ O perfil Financeiro é destinado para o setor de contabilidade. O usuário poder
 <br>
 
 <h3>Administrativo</h3>
-O perfil Administrativo está destinado ao setor de administração e poderá ler os dados de todas as tabelas (SELECT) mas apenas inserir ou modificar (INSERT, UPDATE) os dados das tabelas turmas, alunos e historico_alunos.
+O perfil Administrativo está destinado ao setor de administração e poderá ler os dados de todas as tabelas (SELECT) mas apenas inserir ou modificar (INSERT, UPDATE) os dados das tabelas turmas, alunos e historico_alunos. Também poderá acessar todas as views e os stored procedures `ordem_tabela` e `novo_aluno`
 <br><br>
 
 | Descrição  | DML | Grants | Tabelas
 | ---- | ------ |-----------| ------- |
-| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos, historico_alunos, LOG_ALUNOS, LOG_HISTORICO_ALUNOS, Views e Stored Procedures |
+| Leitura | SELECT |  Sim |  turmas, alunos, financeiro, pedidos, historico_alunos, LOG_ALUNOS, LOG_HISTORICO_ALUNOS, Views e Stored Procedures 'novo_aluno' e 'ordem_tabela' |
 | Inserção | INSERT |  Sim |  turmas, alunos e historico_alunos |
 | Atualização | UPDATE | Sim | turmas, alunos e historico_alunos |  
 | Remoção | DELETE | Não |  -   |
